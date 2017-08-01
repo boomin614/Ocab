@@ -14,16 +14,19 @@ wakati     : 南アルプスの天然水 Sparking Lemon レモン 一 絞る
 ```
 
 ## As like Library in Python code
-ライブラリとして使うときは、
+ライブラリとして使うときは、こんな感じです。
 
 ```python
-from Mecab2 import Mecab2, Regexp
-c = Regexp()
-text1 = c.normalize("南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り")
-print(text1) # 南アルプスの天然水-Sparking*Lemon+レモン一絞り
-m = Mecab2(target=["名詞","動詞","形容詞","副詞"])
-text2 = m.wakati(text)
-print(text2) # 南アルプスの天然水 Sparking Lemon レモン 一 絞る
+$ python
+>>> from Mecab2 import Mecab2, Regexp
+>>> c = Regexp()
+>>> text1 = c.normalize("南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り")
+>>> print(text1)
+南アルプスの天然水-Sparking*Lemon+レモン一絞り
+>>> m = Mecab2(target=["名詞","動詞","形容詞","副詞"])
+>>> text2 = m.wakati(text1)
+>>> print(text2)
+南アルプスの天然水 Sparking Lemon レモン 一 絞る
 ```
 
 もっといろいろ指定できたりしますが、そこはコード読んでください。
