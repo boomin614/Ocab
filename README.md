@@ -1,6 +1,6 @@
 # What is this?
 日本語解析ライブラリ[MeCab](http://taku910.github.io/mecab/)を使う際の、前処理を行うためのpython用ライブラリです。  
-詳細は、[こちらを参照してください](http://boomin.yokohama)
+詳細は、[こちらを参照してください](http://boomin.yokohama/634)
 
 # How to use
 ## As a single program
