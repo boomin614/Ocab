@@ -36,3 +36,4 @@ print(text3) # 南アルプスの天然水 Sparking Lemon レモン 絞る
 # Reference
 1. [解析前に行うことが望ましい文字列の正規化処理](https://github.com/neologd/mecab-ipadic-neologd/wiki/Regexp.ja)
 1. [MeCabとPythonで品詞を選びつつ分かち書きをしたよ](https://foolean.net/p/576)
+1. [日本語のストップワードのリスト](http://svn.sourceforge.jp/svnroot/slothlib/CSharp/Version1/SlothLib/NLP/Filter/StopWord/word/Japanese.txt)
