@@ -8,9 +8,10 @@
 
 ```bash
 $ python Mecab2.py 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
-input      : 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
-preprosess : 南アルプスの天然水-Sparking*Lemon+レモン一絞り
-wakati     : 南アルプスの天然水 Sparking Lemon レモン 一 絞る
+input     : 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
+preprosess: 南アルプスの天然水-Sparking*Lemon+レモン一絞り
+wakati    : 南アルプスの天然水 Sparking Lemon レモン 一 絞る
+rmv st wds: 南アルプスの天然水 Sparking Lemon レモン 絞る
 ```
 
 ## As like Library in Python code
@@ -18,18 +19,19 @@ wakati     : 南アルプスの天然水 Sparking Lemon レモン 一 絞る
 
 ```python
 $ python
->>> from Mecab2 import Mecab2, Regexp
->>> c = Regexp()
->>> text1 = c.normalize("南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り")
->>> print(text1)
-南アルプスの天然水-Sparking*Lemon+レモン一絞り
->>> m = Mecab2(target=["名詞","動詞","形容詞","副詞"])
->>> text2 = m.wakati(text1)
->>> print(text2)
-南アルプスの天然水 Sparking Lemon レモン 一 絞る
+from Mecab2 import Mecab2, Regexp
+c = Regexp()
+text1 = c.normalize("南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り")
+print(text1) # 南アルプスの天然水-Sparking*Lemon+レモン一絞り
+m = Mecab2(target=["名詞","動詞","形容詞","副詞"])
+text2 = m.wakati(text1)
+print(text2) # 南アルプスの天然水 Sparking Lemon レモン 一 絞る
+text3 = m.removeStoplist(text2, [])
+print(text3) # 南アルプスの天然水 Sparking Lemon レモン 絞る
 ```
 
-もっといろいろ指定できたりしますが、そこはコード読んでください。
+`m = Mecab2(target=["名詞","動詞","形容詞","副詞"])`の部分でもっといろいろ指定できたりしますが、  
+そこはコード読んでください。
 
 # Reference
 1. [解析前に行うことが望ましい文字列の正規化処理](https://github.com/neologd/mecab-ipadic-neologd/wiki/Regexp.ja)
