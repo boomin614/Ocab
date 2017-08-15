@@ -34,6 +34,9 @@ print(text3) # 南アルプスの天然水 Sparking Lemon レモン 絞る
 `m = Ocab(target=["名詞","動詞","形容詞","副詞"])`の部分でもっといろいろ指定できたりしますが、  
 そこはコード読んでください。
 
+# License
+This program is applied MIT License.
+
 # Reference
 1. [解析前に行うことが望ましい文字列の正規化処理](https://github.com/neologd/mecab-ipadic-neologd/wiki/Regexp.ja)
 1. [MeCabとPythonで品詞を選びつつ分かち書きをしたよ](https://foolean.net/p/576)
