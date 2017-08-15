@@ -20,18 +20,18 @@ rmv st wds: 南アルプスの天然水 Sparking Lemon レモン 絞る
 
 ```python
 $ python
-from Mecab2 import Mecab2, Regexp
+from Ocab import Ocab, Regexp
 c = Regexp()
 text1 = c.normalize("南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り")
 print(text1) # 南アルプスの天然水-Sparking*Lemon+レモン一絞り
-m = Mecab2(target=["名詞","動詞","形容詞","副詞"])
+m = Ocab(target=["名詞","動詞","形容詞","副詞"])
 text2 = m.wakati(text1)
 print(text2) # 南アルプスの天然水 Sparking Lemon レモン 一 絞る
 text3 = m.removeStoplist(text2, [])
 print(text3) # 南アルプスの天然水 Sparking Lemon レモン 絞る
 ```
 
-`m = Mecab2(target=["名詞","動詞","形容詞","副詞"])`の部分でもっといろいろ指定できたりしますが、  
+`m = Ocab(target=["名詞","動詞","形容詞","副詞"])`の部分でもっといろいろ指定できたりしますが、  
 そこはコード読んでください。
 
 # Reference
