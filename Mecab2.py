@@ -194,7 +194,7 @@ if __name__ == '__main__': #MeCab2.pyを実行すると以下が実行される�
   m = Mecab2()
   print("input     : {}".format(args.target))
   regexp = c.normalize(args.target)
-  print("preprosess: {}".format(regexp))
+  print("normalized: {}".format(regexp))
   wakati = m.wakati(regexp)
   print("wakati    : {}".format(wakati))
   print("rmv st wds: {}".format(m.removeStoplist(wakati,[])))
