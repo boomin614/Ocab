@@ -1,13 +1,14 @@
 # What is this?
-日本語解析ライブラリ[MeCab](http://taku910.github.io/mecab/)を使う際の、前処理を行うためのpython用ライブラリです。  
-詳細は、[こちらを参照してください](http://boomin.yokohama/archives/634)
+日本語解析ライブラリ[MeCab](http://taku910.github.io/mecab/)を使う際の、前処理を行うためのpython用ライブラリOcabです。  
+Mecabを雌株と見たてて、雄株ことOcabと命名。  
+使い方の詳細は、[こちらを参照](http://boomin.yokohama/archives/634)してください。
 
 # How to use
 ## As a single program
 単体で使うときは、以下のように使います。
 
 ```bash
-$ python Mecab2.py 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
+$ python Ocab.py 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
 input     : 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
 normalized: 南アルプスの天然水-Sparking*Lemon+レモン一絞り
 wakati    : 南アルプスの天然水 Sparking Lemon レモン 一 絞る

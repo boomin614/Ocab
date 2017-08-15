@@ -78,7 +78,7 @@ class Regexp:
     s = re.sub('[”]', '"', s)
     return s
 
-class Mecab2:
+class Ocab:
   def __init__(self, opO="-Ochasen", dicpath="",
                target=[], mode="genkei", form="han", splitchar=" ",
                replace_rule = "",
@@ -113,7 +113,7 @@ class Mecab2:
       }
     self.mecab     = MeCab.Tagger(self.opO + dOps)
     self.mecab.parse('')				# MeCab上の不具合で一度空で解析すると解消される
-    
+
   def removeStoplist(self, documents, stoplist):
     #ストップワード対象文字列は、以下から取得
     #http://svn.sourceforge.jp/svnroot/slothlib/CSharp/Version1/SlothLib/NLP/Filter/StopWord/word/Japanese.txt
@@ -127,7 +127,7 @@ class Mecab2:
         removed += doc + " "
     #print(removed)
     return removed.strip()
-  
+
 
   def wakati(self, line):
     text = ''
@@ -191,11 +191,10 @@ if __name__ == '__main__': #MeCab2.pyを実行すると以下が実行される�
   args = parser.parse_args()
 
   c = Regexp()
-  m = Mecab2()
+  m = Ocab()
   print("input     : {}".format(args.target))
   regexp = c.normalize(args.target)
   print("normalized: {}".format(regexp))
   wakati = m.wakati(regexp)
   print("wakati    : {}".format(wakati))
   print("rmv st wds: {}".format(m.removeStoplist(wakati,[])))
-  
