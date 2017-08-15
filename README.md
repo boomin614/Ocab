@@ -9,7 +9,7 @@
 ```bash
 $ python Mecab2.py 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
 input     : 南アルプスの天然水-Ｓｐａｒｋｉｎｇ*Ｌｅｍｏｎ+レモン一絞り
-preprosess: 南アルプスの天然水-Sparking*Lemon+レモン一絞り
+normalized: 南アルプスの天然水-Sparking*Lemon+レモン一絞り
 wakati    : 南アルプスの天然水 Sparking Lemon レモン 一 絞る
 rmv st wds: 南アルプスの天然水 Sparking Lemon レモン 絞る
 ```
