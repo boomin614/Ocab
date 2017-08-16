@@ -79,8 +79,8 @@ class Regexp:
 class Ocab:
   def __init__(self, opO="-Ochasen", dicpath="",
                target=[], mode="genkei", form="han", splitchar=" ",
-               replace_rule = "",
-               exclusion=["記号","BOS/EOS"]):
+               replace_rule = "", exclusion=["記号","BOS/EOS"]
+               ):
     # ここでクラスのメンバーが定義されているのに注意
     self.opO       = opO
     self.dicpath   = dicpath
@@ -106,7 +106,7 @@ class Ocab:
           '非自立': "",
           '固有名詞': {
             '人名': ""
-		       }
+		  }
         }
       }
     self.mecab     = MeCab.Tagger(self.opO + dOps)
